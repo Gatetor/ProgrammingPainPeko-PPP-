@@ -92,4 +92,7 @@ public class Poki {
     public void setTipo() {
     }
 
+    public void resetStat() {
+    }
+
 }
