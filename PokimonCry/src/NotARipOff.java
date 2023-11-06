@@ -18,7 +18,7 @@ public class NotARipOff {
 
         System.out.println(primerPoki);
 
-        System.out.println("A luchar owo");
+        System.out.println("Luchar! owo");
 
         otherPoki.setTipo();
 

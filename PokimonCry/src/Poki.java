@@ -1,6 +1,7 @@
 public class Poki {
     // math random para las estadisticas
 
+    private char id;
     private String tipo;
     private int atk;
     private int dfn;
@@ -26,7 +27,8 @@ public class Poki {
         return hp;
     }
 
-    public Poki(String tipo, int atk, int dfn, int hp) {
+    public Poki(char id, String tipo, int atk, int dfn, int hp) {
+        this.id = 'A';
         this.tipo = tipo;
         this.atk = atk;
         this.dfn = dfn;
@@ -37,6 +39,7 @@ public class Poki {
     String nombreRandom;
 
     public Poki() {
+        this.id = 'A';
         this.tipo = "Prueba";
         this.atk = (int) (Math.random() * 100);
         this.dfn = (int) (Math.random() * 100);
@@ -83,7 +86,7 @@ public class Poki {
 
     @Override
     public String toString() {
-        return this + " [tipo=" + tipo + ", atk=" + atk + ", dfn=" + dfn + ", hp=" + hp + "]";
+        return this.id + " [tipo=" + tipo + ", atk=" + atk + ", dfn=" + dfn + ", hp=" + hp + "]";
     }
 
     // teniendo los datos hasta aqui, tenemos un setup basico llamado POJO
@@ -96,6 +99,7 @@ public class Poki {
     public int ganador = 0;
 
     public void resetStat() {
+        this.id = 'B';
         this.setTipo();
         this.atk = (int) (Math.random() * 100);
         this.dfn = (int) (Math.random() * 100);
