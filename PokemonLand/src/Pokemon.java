@@ -1,4 +1,4 @@
-public class Pokemon {
+public class Poki {
 
     private char tipo;
     private int atk;
@@ -25,16 +25,19 @@ public class Pokemon {
         return hp;
     }
 
-    public Pokemon(char tipo, int atk, int dfn, int hp) {
-        this.tipo = tipo;
+    public Poki(String string, int atk, int dfn, int hp) {
+        this.tipo = string;
         this.atk = atk;
         this.dfn = dfn;
         this.hp = hp;
     }
 
+    public Poki() {
+    }
+
     @Override
     public String toString() {
-        return "Pokemon [tipo=" + tipo + ", atk=" + atk + ", dfn=" + dfn + ", hp=" + hp + "]";
+        return "Poki [tipo=" + tipo + ", atk=" + atk + ", dfn=" + dfn + ", hp=" + hp + "]";
     }
 
     // teniendo los datos hasta aqui, tenemos un setup basico llamado POJO
@@ -51,19 +54,19 @@ public class Pokemon {
 
     public int ganador = 0;
 
-    public int lucha(Pokemon otherPokemon) { // Pokemon <-- Clase otherPokemon <-- Variable?
-                                             // pokemon contra el que va a luchar
+    public int lucha(Poki otherPoki) { // Poki <-- Clase otherPoki <-- Variable?
+                                             // Poki contra el que va a luchar
         
 
-        while ((this.hp > 0) && (otherPokemon.hp > 0)) { //si alguno muere termina
-            this.hp -= (otherPokemon.atk - this.dfn); //mi ataque - su defensa
-            otherPokemon.hp -= (this.atk - otherPokemon.dfn); //su ataque - mi defensa
+        while ((this.hp > 0) && (otherPoki.hp > 0)) { //si alguno muere termina
+            this.hp -= (otherPoki.atk - this.dfn); //mi ataque - su defensa
+            otherPoki.hp -= (this.atk - otherPoki.dfn); //su ataque - mi defensa
         }
 
-        if (this.hp > otherPokemon.hp) {
+        if (this.hp > otherPoki.hp) {
             this.ganador=1;
         } else {
-            if (otherPokemon.hp > this.hp) {
+            if (otherPoki.hp > this.hp) {
                 this.ganador=2;
             } else {
                 this.ganador=3;
@@ -78,6 +81,15 @@ public class Pokemon {
 
     public int getGanador() {
         return ganador;
+    }
+
+    public void nombreRandom() {
+    }
+
+    public void ponerNombre() {
+    }
+
+    public void setTipo() {
     }
 
 }

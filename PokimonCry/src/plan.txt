@@ -1,0 +1,12 @@
+
+// se mueve por el mapa, bordes efectivos
+// Pokimochila con capacidad para tres pokimon
+// cada vez que se mueva, tiene una probabilidad de encontrarse un pokimon
+// para capturar necesita espacio en la mochila, metodo a elegir para capturar
+// en lugar de capturarlos tmb se puede luchar contra el
+// ignorar es una opcion
+// si ganas, se suma dinero A, sino, lo pierde
+// menu para elegir hacia donde moverse, con opcion para terminal la partida
+// al terminar el programa; hay que mostrar numero de casillas recorridas
+// numero de victorias y derrotas (KDA) y dineros
+// clase entrenador, pokimochila, pokimon, pokimonGO(main)
