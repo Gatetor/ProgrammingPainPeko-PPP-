@@ -46,6 +46,8 @@ public class Poki {
         this.hp = (int) (Math.random() * 100);
     }
 
+    
+
     public String nombreRandom() {
         tiporandom = Math.random() * 100;
 
