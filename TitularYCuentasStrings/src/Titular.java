@@ -14,9 +14,9 @@ public class Titular {
     }
     
     
-
-    public String toStringTitular() {
-        return "titular [nif=" + nif + ", nombre=" + nombre + ", apellidos=" + apellidos + ", fecha=" + fecha + "]";
+    @Override
+    public String toString() {
+        return "[nif=" + nif + ", nombre=" + nombre + ", apellidos=" + apellidos + ", fecha=" + fecha + "]";
     }
     public String getNif() {
         return nif;
