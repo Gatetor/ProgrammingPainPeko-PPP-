@@ -13,10 +13,27 @@ public class PalindromoMain {
         strA = strA.toUpperCase();
         boolean Ayuda = isPali(strA);
 
+        //FIXME: comentar de aqui
+
+        // for (int i = strA.length() - 1; i < 0; i++) {
+
+        //     if (strA.charAt(i)) {
+
+        //     } else {
+
+        //     }
+
+        // }
+        // //FIXME: a aqui
+
+
+
+        //TODO: Procesar de 4 en 4 y rellenar con 0s lo necesario
+
         if (Ayuda == true) {
-            System.out.println("La palabra es perfectamente simetrica; que gusto");
+        System.out.println("La palabra es perfectamente simetrica; que gusto");
         } else {
-            System.out.println("Esa palabra es asquerosamente asimetrica, ew");
+        System.out.println("Esa palabra es asquerosamente asimetrica, ew");
         }
 
         teclado.close();
