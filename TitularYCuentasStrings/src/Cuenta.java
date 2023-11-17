@@ -3,7 +3,6 @@ public class Cuenta {
     private double saldo;
     private Titular titular;
 
-    Cuenta cuenta1;
 
     public Cuenta(int id, double saldo, Titular titular) {
        this.id = 0;
@@ -11,15 +10,16 @@ public class Cuenta {
        
     }
 
-    @Override
-    public String toString() {
-        return "Cuenta [id=" + id + ", saldo=" + saldo + ", titular=" + titular + ", cuenta1=" + cuenta1 + "]";
+    public String toStringCuenta() {
+        return "Cuenta [id=" + id + ", saldo=" + saldo + ", titular=" + titular + "]";
     }
 
     public String mostrar() {
         String todo;
-        todo = this.titular.toString();
-        todo = todo + this.toString();
+        todo = this.toStringCuenta();
+        todo = todo + this.titular.getNif();
+        todo = todo + this.titular.getNombre();
+        todo = todo + this.titular.getApellidos();
         return todo;
     }
 

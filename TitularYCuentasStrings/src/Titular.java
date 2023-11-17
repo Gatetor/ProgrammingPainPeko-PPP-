@@ -6,19 +6,16 @@ public class Titular {
     private String apellidos = "apepog";
     private LocalDate fecha;
 
-    Titular titular1;
-
-    public Titular(String nif, double saldo, Titular titular) {
-       this.nif = "";
-       this.nombre = "";
-       this.apellidos = "";
-       //this.fecha =
+    public Titular(String nif, String nombre, double saldo, String apellidos) {
+       this.nif = "1";
+       this.nombre = "1";
+       this.apellidos = "1";
+       
     }
     
     
 
-    @Override
-    public String toString() {
+    public String toStringTitular() {
         return "titular [nif=" + nif + ", nombre=" + nombre + ", apellidos=" + apellidos + ", fecha=" + fecha + "]";
     }
     public String getNif() {
