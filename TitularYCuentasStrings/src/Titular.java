@@ -6,17 +6,17 @@ public class Titular {
     private String apellidos = "apepog";
     private LocalDate fecha;
 
-    public Titular(String nif, String nombre, double saldo, String apellidos) {
-       this.nif = "1";
-       this.nombre = "1";
-       this.apellidos = "1";
+    public Titular(String nif, String nombre, String apellidos) {
+       this.nif = "00001M";
+       this.nombre = "Payo Acho Pijo";
+       this.apellidos = "Worcestershire";
        
     }
     
     
     @Override
     public String toString() {
-        return "[nif=" + nif + ", nombre=" + nombre + ", apellidos=" + apellidos + ", fecha=" + fecha + "]";
+        return "[nif = " + nif + ", nombre = " + nombre + ", apellidos = " + apellidos + ", fecha = " + fecha + "]";
     }
     public String getNif() {
         return nif;
