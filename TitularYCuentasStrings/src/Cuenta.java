@@ -58,10 +58,10 @@ public class Cuenta {
     }
 
     // public void ingresar(double cantidad) {
-    //FIXME: Esto es el metodo pero con la cosa del parentesis
+    // FIXME: Esto es el metodo pero con la cosa del parentesis
     // if (cantidad > 0) {
     // this.saldo+=cantidad
-    //   }
+    // }
     // }
 
     public double ingresar() {
@@ -111,20 +111,31 @@ public class Cuenta {
         return saldo;
     }
 
-    //TODO: Metodo para comparar
-    // public int compararIdCuenta(Cuenta cuenta2) {
-    // int siono;
+    public boolean compararIdCuenta(Cuenta cuenta2) {
+        boolean iguales = false;
 
-    // int id1 = cuenta2.getId();
-    // int id2;
+        if (this.id == cuenta2.id) {
+            iguales = true;
+        } else {
+            iguales = false;
+        }
+        return iguales;
+    }
 
-    // if () {
-
-    // } else {
+    // public boolean igualQue(Titular titular) {
+    // boolean iguales = false;
+    // if (this) {
 
     // }
+    // }
 
-    // return siono;
+    // public boolean compararTitular(Cuenta cuenta2) {
+
+    // if (this.titular.igualQue(cuenta2.titular)) {
+    // return true;
+    // } else {
+    // return false;
+    // }
     // }
 
     public static void main(String[] args) throws Exception {
@@ -152,6 +163,7 @@ public class Cuenta {
         System.out.println("");
         System.out.println("1. Ingresar dinero");
         System.out.println("2. Retirar dinero");
+        System.out.println("3. Comparar Id cuentas");
 
         opc = teclado.nextInt();
 
@@ -173,10 +185,14 @@ public class Cuenta {
                 }
                 break;
 
+            case 3:
+                cuenta1.compararIdCuenta(cuenta2);
+                break;
             default:
                 System.out.println("*Pinkmin noise*");
                 break;
         }
+        System.out.println("");
         System.out.println(cuenta1.mostrar());
         System.out.println(cuenta2.mostrar());
 
