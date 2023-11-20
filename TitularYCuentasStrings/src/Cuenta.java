@@ -111,6 +111,8 @@ public class Cuenta {
         return saldo;
     }
 
+    //fuck
+
     public boolean compararIdCuenta(Cuenta cuenta2) {
         boolean iguales = false;
 
