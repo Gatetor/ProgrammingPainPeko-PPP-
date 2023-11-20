@@ -1,3 +1,4 @@
+import java.time.LocalDate;
 import java.util.Scanner;
 
 public class Cuenta {
@@ -56,6 +57,13 @@ public class Cuenta {
         return todo;
     }
 
+    // public void ingresar(double cantidad) {
+    //FIXME: Esto es el metodo pero con la cosa del parentesis
+    // if (cantidad > 0) {
+    // this.saldo+=cantidad
+    //   }
+    // }
+
     public double ingresar() {
 
         while (cantidad < 0) {
@@ -64,7 +72,7 @@ public class Cuenta {
             cantidad = teclado.nextDouble();
             if (cantidad > 0) {
                 this.setCantidad(cantidad);
-                saldo = saldo + cantidad;
+                this.saldo += cantidad;
                 System.out.println("Dinero ingresado: " + cantidad);
                 System.out.print("Nuevo saldo :" + this.getSaldo());
             } else {
@@ -103,19 +111,20 @@ public class Cuenta {
         return saldo;
     }
 
+    //TODO: Metodo para comparar
     // public int compararIdCuenta(Cuenta cuenta2) {
-    //     int siono;
+    // int siono;
 
-    //     int id1 = cuenta2.getId();
-    //     int id2;
+    // int id1 = cuenta2.getId();
+    // int id2;
 
-    //     if () {
-            
-    //     } else {
-            
-    //     }
+    // if () {
 
-    //     return siono;
+    // } else {
+
+    // }
+
+    // return siono;
     // }
 
     public static void main(String[] args) throws Exception {
@@ -125,8 +134,8 @@ public class Cuenta {
 
         int opc, opcCuenta;
 
-        titular1 = new Titular("0000001M", "Alv", "Madre Loco");
-        titular2 = new Titular("0222002A", "Poggers", "Tolaila");
+        titular1 = new Titular("0000001M", "Alv", "Madre Loco", LocalDate.of(2020, 10, 5));
+        titular2 = new Titular("0222002A", "Poggers", "Tolaila", LocalDate.of(1999, 5, 23));
 
         cuenta1 = new Cuenta(1, 3.14, titular1);
         cuenta2 = new Cuenta(2, 420.69, titular2);

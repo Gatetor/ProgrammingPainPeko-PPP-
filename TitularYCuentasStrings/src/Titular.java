@@ -6,11 +6,11 @@ public class Titular {
     private String apellidos = "apepog";
     private LocalDate fecha;
 
-    public Titular(String nif, String nombre, String apellidos) {
-       this.nif = "00001M";
-       this.nombre = "Payo Acho Pijo";
-       this.apellidos = "Worcestershire";
-       
+    public Titular(String nif, String nombre, String apellidos, LocalDate fecha) {
+       this.nif = nif;
+       this.nombre = nombre;
+       this.apellidos = apellidos;
+       this.fecha = fecha;
     }
     
     
