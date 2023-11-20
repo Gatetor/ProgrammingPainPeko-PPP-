@@ -111,7 +111,8 @@ public class Cuenta {
         return saldo;
     }
 
-    //fuck
+    //sin mensaje?
+    //TODO: Hacer el for con contadorDiferencias++
 
     public boolean compararIdCuenta(Cuenta cuenta2) {
         boolean iguales = false;
