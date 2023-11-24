@@ -65,7 +65,6 @@ public class Cuenta {
     // }
 
     public double ingresar() {
-
         while (cantidad < 0) {
             System.out.println("Cantidad a ingresar?");
             System.out.println("Cantidad actual: " + this.saldo);
@@ -111,8 +110,8 @@ public class Cuenta {
         return saldo;
     }
 
-    //sin mensaje?
-    //TODO: Hacer el for con contadorDiferencias++
+    // sin mensaje?
+    // TODO: Hacer el for con contadorDiferencias++
 
     public boolean compararIdCuenta(Cuenta cuenta2) {
         boolean iguales = false;
@@ -126,20 +125,18 @@ public class Cuenta {
     }
 }
 
-    // public boolean igualQue(Titular titular) {
-    // boolean iguales = false;
-    // if (this) {
+// public boolean igualQue(Titular titular) {
+// boolean iguales = false;
+// if (this) {
 
-    // }
-    // }
+// }
+// }
 
-    // public boolean compararTitular(Cuenta cuenta2) {
+// public boolean compararTitular(Cuenta cuenta2) {
 
-    // if (this.titular.igualQue(cuenta2.titular)) {
-    // return true;
-    // } else {
-    // return false;
-    // }
-    // }
-
-    
+// if (this.titular.igualQue(cuenta2.titular)) {
+// return true;
+// } else {
+// return false;
+// }
+// }
