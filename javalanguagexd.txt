@@ -1,6 +1,0 @@
-precio*=(1-DESCUENTO)
-LO MISMO QUE
-precio=precio*(1-DESCUENTO)
-
-&& = y
-||= o
