@@ -128,4 +128,10 @@ public class WithFor {
         return elArray;
     }
 
+    //metodo que reciba array de numeros naturales, que devuelva
+    //cuantos numeros primos hay en el array
+
+
+
+
 }
