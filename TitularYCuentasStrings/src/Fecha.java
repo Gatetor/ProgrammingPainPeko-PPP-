@@ -23,6 +23,15 @@ public class Fecha {
         }
     }
 
+    public void jajnt() {
+        int funny = 5;
+        if (funny > 10) {
+            System.out.println("Poggers");
+        } else {
+            System.out.println("Cringe");
+        }
+    }
+
     public int diasMes() {
         switch (this.mes) {
             case 1, 3, 5, 7, 8, 10, 12:
