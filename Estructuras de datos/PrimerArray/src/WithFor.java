@@ -70,12 +70,12 @@ public class WithFor {
         //sysout con el metodo, pasandole el array
         System.out.println("Mayor: " + mayor(anArray));
 
-        rotateBanana(anArray);
+        // rotateBanana(anArray);
 
-        for (int valor : anArray) {
-            Thread.sleep(300);
-            System.out.println("Valor: " + valor);
-        }
+        // for (int valor : anArray) {
+        //     Thread.sleep(300);
+        //     System.out.println("Valor: " + valor);
+        // }
 
         // System.out.println("El mas tocho: " + mayor);
 
@@ -83,6 +83,12 @@ public class WithFor {
         // for (int i = 0; i < anArray.length; i++) {
         // System.out.println("Valor: " + anArray[i]);
         // }
+
+        if (ordenado(anArray) == true) {
+            System.out.println("Ta ordenado :)");
+        } else {
+            System.out.println("No ta ordenao :(");
+        }
 
     }
 
@@ -126,6 +132,17 @@ public class WithFor {
         //re-escribimos en casilla 0 para poner el que estaba en la ultima posicion
         elArray[0] = auxiliar;
         return elArray;
+    }
+
+    public static boolean ordenado(int [] numeros) {
+        boolean isInOrder = true;
+
+        for (int i = 0; i < numeros.length-1; i++) {
+            if (numeros[i] > numeros[i+1]) {
+                isInOrder = false;
+            }
+        }
+        return isInOrder; 
     }
 
     //metodo que reciba array de numeros naturales, que devuelva
