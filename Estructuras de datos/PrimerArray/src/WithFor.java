@@ -18,11 +18,19 @@ public class WithFor {
 
         // declares an array of integers
         int[] anArray;
+        String[] arrayString;
         int suma = 0;
         int mayor;
+        String poggers;
+
+        System.out.println("Introduce frase para cifrar");
+        poggers = teclado.nextLine();
+    
+        int arrayLength = poggers.length();
 
         // allocates memory for 10 integers
         anArray = new int[10];
+        arrayString = new String[arrayLength];
 
         // initialize first element
         anArray[0] = 100;
