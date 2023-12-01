@@ -12,27 +12,17 @@ public class Caesar {
 
             letra = texto.charAt(i);
             if (letra == 'x') {
-
                 charCifrado = 'a';
-
             } else {
-
                 if (letra == 'y') {
-
                     charCifrado = 'b';
-
                 } else {
-
                     if (letra == 'z') {
-
                         charCifrado = 'c';
-
                     } else {
                         charCifrado = letra + 3;
                     }
-
                 }
-
             }
             textoCifrado = textoCifrado + (char) charCifrado;
         }
@@ -57,27 +47,17 @@ public class Caesar {
 
             letra = texto.charAt(i);
             if (letra == 'a') {
-
                 charCifrado = 'x';
-
             } else {
-
                 if (letra == 'b') {
-
                     charCifrado = 'y';
-
                 } else {
-
                     if (letra == 'c') {
-
                         charCifrado = 'z';
-
                     } else {
                         charCifrado = letra - 3;
                     }
-
                 }
-
             }
             textoDescifrado = textoDescifrado + (char) charCifrado;
         }

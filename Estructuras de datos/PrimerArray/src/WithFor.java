@@ -37,8 +37,9 @@ public class WithFor {
         anArray[7] = 800;
         anArray[8] = 900;
         anArray[9] = 1000;
-        // TODO: Esto se queda irrelevante con los metodos de mas adelante, pero venian
-        // en el ejemplo
+        // FIXME: Esto se queda irrelevante con los metodos de mas adelante, pero venian en el ejemplo
+
+        //TODO: cifrado cesar con arrays
 
         for (int i = 0; i < anArray.length; i++) {
             System.out.println("Introduzca valor: ");
@@ -95,6 +96,7 @@ public class WithFor {
         int[] array2 = {4,5,6};
         int[] sumaArrays = sumaVectores(array1, array2);
 
+        System.out.println("**********SUMA**********");
         //Arrays.toString pasandole el objeto de la suma para poder mostrarlo por pantalla
         //sin que te de la direccion de memoria y te quedes to loco pensando "wtf did just happen"
         System.out.println(Arrays.toString(sumaArrays));
@@ -163,6 +165,7 @@ public class WithFor {
             return suma;
         }
 
+
         suma = new int[vector1.length];
 
         for (int i = 0; i < suma.length; i++) {
@@ -176,6 +179,64 @@ public class WithFor {
     //cuantos numeros primos hay en el array
 
 
+    public class contaPrimos {
+
+        private static boolean esPrimo (int[] numeros) {
+            int resto, cont = 0;
+            boolean esPrimo = true;
+
+            for (int i = 0; i < numeros[i]; i++) {
+    
+                if (numeros[i] == 2 || numeros[i] == 1) {
+                    return true;
+                } else {
+                    while (cont < numeros[i] && esPrimo == true) {
+                        resto = numeros[i] % cont;
+    
+                        if (resto == 0) {
+                            return false;
+                        }
+                        cont++;
+                    }
+                }
+            }
+            return true;
+        }
+    
+        public static int contarPrimos (int[] numeros) {
+            int contPrimos = 0;
+    
+            for (int i = 0; i < numeros.length; i++) {
+                if (esPrimo(numeros)) {
+                    contPrimos++;
+                }
+            }
+            return contPrimos;
+        }
+
+
+    
+        //TODO: Aplicar esto en mi main
+
+        // public static void main(String[] args) {
+    
+        //     Scanner sc = new Scanner (System.in);
+    
+        //     int[] anArray = new int[10];
+    
+        //     for (int i=0;i<anArray.length;i++) {
+        //         System.out.println ("Valor " + i);
+        //             anArray[i] = sc.nextInt();
+        //     }
+        //     System.out.println (contarPrimos(anArray));
+    
+        //     for (int i: anArray) {
+        //         System.out.println ("Valor: " + i);
+        //     }
+        //     sc.close();
+        // }
+    }
 
 
 }
+
