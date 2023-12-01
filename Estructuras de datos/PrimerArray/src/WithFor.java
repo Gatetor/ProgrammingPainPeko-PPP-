@@ -1,3 +1,4 @@
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class WithFor {
@@ -90,6 +91,14 @@ public class WithFor {
             System.out.println("No ta ordenao :(");
         }
 
+        int[] array1 = {1,2,3};
+        int[] array2 = {4,5,6};
+        int[] sumaArrays = sumaVectores(array1, array2);
+
+        //Arrays.toString pasandole el objeto de la suma para poder mostrarlo por pantalla
+        //sin que te de la direccion de memoria y te quedes to loco pensando "wtf did just happen"
+        System.out.println(Arrays.toString(sumaArrays));
+
     }
 
     //lo de coger el mayor del array hecho un metodo
@@ -143,6 +152,24 @@ public class WithFor {
             }
         }
         return isInOrder; 
+    }
+
+    private static int[] sumaVectores(int[] vector1, int[] vector2) {
+        int[] suma = null;
+
+        if ((vector1 == null)
+            || (vector2 == null)
+            || (vector1.length != vector2.length)) {
+            return suma;
+        }
+
+        suma = new int[vector1.length];
+
+        for (int i = 0; i < suma.length; i++) {
+            suma[i] = vector1[i] + vector2[i]; 
+        }
+
+        return suma;
     }
 
     //metodo que reciba array de numeros naturales, que devuelva
