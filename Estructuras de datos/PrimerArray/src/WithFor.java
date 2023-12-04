@@ -334,6 +334,14 @@ public class WithFor {
         return reverse;
     }
 
+    private static String randomNumba(String[] cadenas) {
+        int aleatorio;
+
+        aleatorio = (int) (Math.random()*cadenas.length);
+
+        return cadenas[aleatorio];
+    }
+
     //TODO: Actually make this shit
     // private static int contaLindromos(String[] cadenas) {
     //     int contador = 0;
@@ -348,10 +356,3 @@ public class WithFor {
     // }
 
 }
-
-//booleano que comprueba orden alfabetico poggers
-//dado un array de strings devolver cuantos palindromos hay
-//dado un array string devuelva otro string texto; darle la vuelta al array
-//dado un array de strings me devuelva de manera aleatoria me devulva uno de los elementos del array
-
-//meowzers
