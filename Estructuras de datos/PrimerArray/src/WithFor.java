@@ -20,8 +20,8 @@ public class WithFor {
         int[] anArray;
         String[] arrayString;
         int suma = 0;
-        int mayor;
         String poggers;
+        int mayor;
 
         System.out.println("Introduce frase para cifrar");
         poggers = teclado.nextLine();
@@ -48,7 +48,7 @@ public class WithFor {
         // FIXME: Esto se queda irrelevante con los metodos de mas adelante, pero venian
         // en el ejemplo
 
-        // TODO: cifrado cesar con arrays
+        // TODO: cifrado hecho; apañarlo para string porque encima esta a medias???
 
         for (int i = 0; i < anArray.length; i++) {
             System.out.println("Introduzca valor: ");
@@ -70,30 +70,33 @@ public class WithFor {
             System.out.println("Suma por ahora: " + suma);
         }
 
-        // mayor = anArray[0];
+        //FIXME: esto puede dar error
+        mayor = anArray[0];
 
-        // for (int i = 0; i < anArray.length; i++) {
-        // if (anArray[i] > mayor) {
-        // mayor = anArray[i];
-        // }
-        // }
-
+        for (int i = 0; i < anArray.length; i++) {
+        if (anArray[i] > mayor) {
+        mayor = anArray[i];
+        }
+        }
+        
+    
         // sysout con el metodo, pasandole el array
         System.out.println("Mayor: " + mayor(anArray));
 
-        // rotateBanana(anArray);
+        rotateBanana(anArray);
 
-        // for (int valor : anArray) {
-        // Thread.sleep(300);
-        // System.out.println("Valor: " + valor);
-        // }
+        for (int valor : anArray) {
+        Thread.sleep(300);
+        System.out.println("Valor: " + valor);
+        }
 
-        // System.out.println("El mas tocho: " + mayor);
+        System.out.println("El mas tocho: " + mayor);
 
-        // creo que se entiende, vamos
-        // for (int i = 0; i < anArray.length; i++) {
-        // System.out.println("Valor: " + anArray[i]);
-        // }
+        //creo que se entiende, vamos
+        for (int i = 0; i < anArray.length; i++) {
+        System.out.println("Valor: " + anArray[i]);
+        }
+        //FIXME: hasta aqui
 
         if (ordenado(anArray) == true) {
             System.out.println("Ta ordenado :)");
@@ -112,6 +115,7 @@ public class WithFor {
         // just happen"
         System.out.println(Arrays.toString(sumaArrays));
 
+        teclado.close();
     }
 
     // lo de coger el mayor del array hecho un metodo
@@ -224,7 +228,7 @@ public class WithFor {
             return contPrimos;
         }
 
-        // TODO: Aplicar esto en mi main
+        // TODO: Aplicar esto en mi main; es del main de Alex
 
         // public static void main(String[] args) {
 
@@ -282,4 +286,59 @@ public class WithFor {
         return resultado;
     }
 
+    private static String mayor(String [] cadenas) {
+        String mayor = null;
+
+        if (cadenas != null) {
+            //elegir valor no nulo
+            mayor = cadenas[0];
+
+            for (int i = 1; i < cadenas.length; i++) {
+                //comprarar la longitud de la cadena en el punto i con el anterior POGPOGPOG
+                //comprobar esta vez que la casilla a comprobar no está vacia
+                if ((cadenas[i].length() > mayor.length())
+                && (mayor != null) 
+                && (cadenas != null)) {
+                    mayor = cadenas[i];
+                }
+            }
+
+        }
+        return mayor;
+    }
+
+    private static boolean estaOrdenado(String[] cadenas) {
+
+        boolean ordenado = true;
+
+        //hay que hacer length-1 en esta ocasion porque sino está outOfBounds
+        for (int i = 0; i < cadenas.length-1; i++) {
+            if (cadenas[i].compareTo(cadenas[i+1]) > 0) {
+                return false;
+            }
+        }
+
+        return ordenado;
+    }
+
+    //TODO: Actually make this shit
+    // private static int contaLindromos(String[] cadenas) {
+    //     int contador = 0;
+
+    //     for (int i = 0; i < cadenas.length; i++) {
+    //         if (FIXME: make a fucking method for this) {
+    //              contador++;
+    //         }
+    //     }
+
+    //     return contador;
+    // }
+
 }
+
+//booleano que comprueba orden alfabetico poggers
+//dado un array de strings devolver cuantos palindromos hay
+//dado un array string devuelva otro string texto; darle la vuelta al array
+//dado un array de strings me devuelva de manera aleatoria me devulva uno de los elementos del array
+
+//meowzers
