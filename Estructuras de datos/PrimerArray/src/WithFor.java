@@ -321,6 +321,19 @@ public class WithFor {
         return ordenado;
     }
 
+    private static String [] unoReverse(String[] cadenas) {
+        String[] reverse;
+
+        //importante reservar la memoria para las cadenas LOCOCOCOCOOCCO
+        reverse = new String[cadenas.length]; 
+
+        for (int i = cadenas.length-1; i >= 0; i--) {
+            //le resto la i a length porque i va bajando; asi que el otro num va subiendo por cada iteracion si resta i
+            reverse[cadenas.length-1-i] = cadenas[i];
+        }
+        return reverse;
+    }
+
     //TODO: Actually make this shit
     // private static int contaLindromos(String[] cadenas) {
     //     int contador = 0;
