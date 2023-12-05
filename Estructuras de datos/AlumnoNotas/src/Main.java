@@ -12,5 +12,6 @@ public class Main {
         Scanner teclado = new Scanner(System.in);
         boiQuantity = teclado.nextInt(); 
 
+        
     }
 }

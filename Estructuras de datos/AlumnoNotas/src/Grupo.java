@@ -7,6 +7,8 @@ public class Grupo {
     private int boiQuantity;
     private Alumno[] alumnos;
 
+    
+
     //actual no clue, on god, on how to do this
 
 //this.alumnos[0].getAsigantura1.getCalificacion()
