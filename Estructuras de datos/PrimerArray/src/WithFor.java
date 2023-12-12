@@ -70,33 +70,32 @@ public class WithFor {
             System.out.println("Suma por ahora: " + suma);
         }
 
-        //FIXME: esto puede dar error
+        // FIXME: esto puede dar error
         mayor = anArray[0];
 
         for (int i = 0; i < anArray.length; i++) {
-        if (anArray[i] > mayor) {
-        mayor = anArray[i];
+            if (anArray[i] > mayor) {
+                mayor = anArray[i];
+            }
         }
-        }
-        
-    
+
         // sysout con el metodo, pasandole el array
         System.out.println("Mayor: " + mayor(anArray));
 
         rotateBanana(anArray);
 
         for (int valor : anArray) {
-        Thread.sleep(300);
-        System.out.println("Valor: " + valor);
+            Thread.sleep(300);
+            System.out.println("Valor: " + valor);
         }
 
         System.out.println("El mas tocho: " + mayor);
 
-        //creo que se entiende, vamos
+        // creo que se entiende, vamos
         for (int i = 0; i < anArray.length; i++) {
-        System.out.println("Valor: " + anArray[i]);
+            System.out.println("Valor: " + anArray[i]);
         }
-        //FIXME: hasta aqui
+        // FIXME: hasta aqui
 
         if (ordenado(anArray) == true) {
             System.out.println("Ta ordenado :)");
@@ -286,19 +285,19 @@ public class WithFor {
         return resultado;
     }
 
-    private static String mayor(String [] cadenas) {
+    private static String mayor(String[] cadenas) {
         String mayor = null;
 
         if (cadenas != null) {
-            //elegir valor no nulo
+            // elegir valor no nulo
             mayor = cadenas[0];
 
             for (int i = 1; i < cadenas.length; i++) {
-                //comprarar la longitud de la cadena en el punto i con el anterior POGPOGPOG
-                //comprobar esta vez que la casilla a comprobar no está vacia
+                // comprarar la longitud de la cadena en el punto i con el anterior POGPOGPOG
+                // comprobar esta vez que la casilla a comprobar no está vacia
                 if ((cadenas[i].length() > mayor.length())
-                && (mayor != null) 
-                && (cadenas != null)) {
+                        && (mayor != null)
+                        && (cadenas != null)) {
                     mayor = cadenas[i];
                 }
             }
@@ -311,9 +310,9 @@ public class WithFor {
 
         boolean ordenado = true;
 
-        //hay que hacer length-1 en esta ocasion porque sino está outOfBounds
-        for (int i = 0; i < cadenas.length-1; i++) {
-            if (cadenas[i].compareTo(cadenas[i+1]) > 0) {
+        // hay que hacer length-1 en esta ocasion porque sino está outOfBounds
+        for (int i = 0; i < cadenas.length - 1; i++) {
+            if (cadenas[i].compareTo(cadenas[i + 1]) > 0) {
                 return false;
             }
         }
@@ -321,15 +320,16 @@ public class WithFor {
         return ordenado;
     }
 
-    private static String [] unoReverse(String[] cadenas) {
+    private static String[] unoReverse(String[] cadenas) {
         String[] reverse;
 
-        //importante reservar la memoria para las cadenas LOCOCOCOCOOCCO
-        reverse = new String[cadenas.length]; 
+        // importante reservar la memoria para las cadenas LOCOCOCOCOOCCO
+        reverse = new String[cadenas.length];
 
-        for (int i = cadenas.length-1; i >= 0; i--) {
-            //le resto la i a length porque i va bajando; asi que el otro num va subiendo por cada iteracion si resta i
-            reverse[cadenas.length-1-i] = cadenas[i];
+        for (int i = cadenas.length - 1; i >= 0; i--) {
+            // le resto la i a length porque i va bajando; asi que el otro num va subiendo
+            // por cada iteracion si resta i
+            reverse[cadenas.length - 1 - i] = cadenas[i];
         }
         return reverse;
     }
@@ -337,22 +337,22 @@ public class WithFor {
     private static String randomNumba(String[] cadenas) {
         int aleatorio;
 
-        aleatorio = (int) (Math.random()*cadenas.length);
+        aleatorio = (int) (Math.random() * cadenas.length);
 
         return cadenas[aleatorio];
     }
 
-    //TODO: Actually make this shit
+    // TODO: Actually make this shit
     // private static int contaLindromos(String[] cadenas) {
-    //     int contador = 0;
+    // int contador = 0;
 
-    //     for (int i = 0; i < cadenas.length; i++) {
-    //         if (FIXME: make a fucking method for this) {
-    //              contador++;
-    //         }
-    //     }
+    // for (int i = 0; i < cadenas.length; i++) {
+    // if (FIXME: make a fucking method for this) {
+    // contador++;
+    // }
+    // }
 
-    //     return contador;
+    // return contador;
     // }
 
 }

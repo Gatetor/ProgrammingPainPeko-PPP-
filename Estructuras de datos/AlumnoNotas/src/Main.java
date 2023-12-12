@@ -12,13 +12,12 @@ public class Main {
         System.out.println("Cuantos boyos vas a calificar?");
 
         Scanner teclado = new Scanner(System.in);
-        boiQuantity = teclado.nextInt(); 
-
+        boiQuantity = teclado.nextInt();
 
     }
 
-    //max 30 alumnos
-    //constructor para hacer grupo sin alumnos
-    //calse escuela 
-    //calse provincia meheperdidoporfavorayuda
+    // max 30 alumnos
+    // constructor para hacer grupo sin alumnos
+    // calse escuela
+    // calse provincia meheperdidoporfavorayuda
 }
