@@ -6,6 +6,7 @@ public class Grupo {
     private Profesor profesor;
     private int boiQuantity;
     private Alumno[] alumnos;
+    
 
     
 
