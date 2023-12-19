@@ -1,17 +1,14 @@
 public class add {
     public static int[][] LeBigAdd(int[][] matrizA, int[][] matrizB) {
         
-        // Verificar si las matrices tienen las mismas dimensiones
         if (matrizA.length != matrizB.length || matrizA[0].length != matrizB[0].length) {
             System.out.println("Las matrices tienen dimensiones diferentes. No se pueden sumar.");
             return null;
         }
 
-        // Obtener las dimensiones de las matrices
         int filas = matrizA.length;
         int columnas = matrizA[0].length;
 
-        // Inicializar una matriz para almacenar el resultado
         int[][] resultado = new int[filas][columnas];
         for (int i = 0; i < filas; i++) {
             for (int j = 0; j < columnas; j++) {
