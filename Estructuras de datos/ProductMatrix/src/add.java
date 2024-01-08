@@ -21,15 +21,15 @@ public class add {
 
     public static void main(String[] args) {
         int[][] matrizA = {
-            {1, 2, 3},
-            {4, 5, 6},
-            {7, 8, 9}
+            {81, 2, 3},
+            {4, 5, -66},
+            {57, -81, 9}
         };
 
         int[][] matrizB = {
-            {-1, -2, -3},
-            {-4, -5, -6},
-            {-7, -8, -9}
+            {12, -2, 33},
+            {4, -5, -6},
+            {57, 3, 9}
         };
 
         int[][] resultadoSuma = LeBigAdd(matrizA, matrizB);
