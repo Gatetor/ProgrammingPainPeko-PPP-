@@ -1,0 +1,19 @@
+Conferencia(nombre, fecha, hora inicio, duración, lugar)
+Investigador(dni, nombre, dirección, teléfono, localidad, dni s.*, p. nuevo*, p. revisión*)
+                dni s.* -> Investigador(dni)
+                p. nuevo* -> Proyecto nuevo(nombre)
+                p. revisión* -> Proyecto revisión(nombre)
+Realiza(nombre*, fecha*, lugar*, dni*)
+                nombre* -> Conferencia(nombre)
+                fecha* -> Conferencia(fecha)
+                 lugar* -> Conferencia(lugar)
+                dni* -> Investigador(investigador)
+Proyecto nuevo(nombre, fecha, duración, presupuesto)
+Proyecto revisión(nombre, fecha, duración, motivo)
+
+Además, debes tener en cuenta que:
+
+El presupuesto de los proyectos nuevos no puede ser mayor que 500.000€, pero ha de ser como mínimo de 500€
+Si se borra un proyecto en el que está trabajando un investigador, su proyecto debe quedar vacío (a NULL).
+El nombre de un investigador no puede estar vacío.
+No pueden estar repetidos dos números de teléfonos en la tabla de investigadores.
