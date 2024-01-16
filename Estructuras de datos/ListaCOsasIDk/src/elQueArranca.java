@@ -5,19 +5,19 @@ public class elQueArranca {
         Scanner teclado = new Scanner(System.in);
 
         int opc;
-        String otraOpc, sector, telefono, nombre, apellidos;
+        String otraOpc, email, sector, telefono, nombre, apellidos;
 
         opc = Integer.parseInt(teclado.nextLine());
 
         
-        ListaContactos lista = new ListaContactos();
+        listaContactos lista = new ListaContactos();
 
-        System.out.println("1. ");
-        System.out.println("2. ");
-        System.out.println("3. ");
-        System.out.println("4. ");
-        System.out.println("5. ");
-        System.out.println("6. ");
+        System.out.println("1. Dar de alta Persona/Empresa");
+        System.out.println("2. Dar de baja Persona/Empresa");
+        System.out.println("3. Modify contact");
+        System.out.println("4. Listar ");
+        System.out.println("5. Cuantas empresas por sector");
+        System.out.println("6. Mostrar emails orden alfabetico");
         System.out.println("7. Salir");
 
         while (opc != 7) {
@@ -27,6 +27,20 @@ public class elQueArranca {
 
                     System.out.println("Persona(p)/Empresa(e)");
                     otraOpc = teclado.nextLine();
+
+                while (condition) {
+                    
+                }
+
+                    if (otraOpc.equals('p')) {
+                        while
+                    } else {
+                        if (otraOpc.equals('e')) {
+                            
+                        } else {
+                            System.out.println("Illo loco que me has puesto");
+                        }
+                    }
 
                     break;
 
@@ -39,7 +53,7 @@ public class elQueArranca {
                     break;
 
                 case 4:
-
+                    lista.listarDatos();
                     break;
 
                 case 5:
