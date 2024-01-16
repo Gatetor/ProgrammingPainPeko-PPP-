@@ -9,7 +9,7 @@ public class listaContactos {
         int posicion;
         boolean resultado;
         if ((posicion = this.buscarPersona(id)) != -1) {
-            Persona persona = this.listaPersoas.get(posicion);
+            Persona persona = this.listaPersonas.get(posicion);
             persona.setTelefono(nuevoTelefono);
             this.listaPersonas.remove(posicion);
             resultado = true;
@@ -27,7 +27,7 @@ public class listaContactos {
         this.listaEmpresas(e);
     }
 
-    // TODO: Whatever the fuck is this
+    // TODO: bajas y altas
     // int posicion;
     // boolean resultado;
     // if ((posicion = this.buscarPersona(id)) != -1) {

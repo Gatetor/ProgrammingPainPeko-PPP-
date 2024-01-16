@@ -10,7 +10,7 @@ public class elQueArranca {
         opc = Integer.parseInt(teclado.nextLine());
 
         
-        listaContactos lista = new ListaContactos();
+        listaContactos lista = new listaContactos();
 
         System.out.println("1. Dar de alta Persona/Empresa");
         System.out.println("2. Dar de baja Persona/Empresa");
@@ -28,12 +28,12 @@ public class elQueArranca {
                     System.out.println("Persona(p)/Empresa(e)");
                     otraOpc = teclado.nextLine();
 
-                while (condition) {
+                while (opc != 2 ) {
                     
                 }
 
                     if (otraOpc.equals('p')) {
-                        while
+                        while ()
                     } else {
                         if (otraOpc.equals('e')) {
                             
@@ -62,9 +62,13 @@ public class elQueArranca {
 
                 case 6:
 
+
+
                     break;
 
                 case 7:
+
+
 
                     break;
 
@@ -77,3 +81,9 @@ public class elQueArranca {
 
     }
 }
+
+
+//TODO: Para el ordenador de casa
+    //Arreglar ErrorLens, revisar ArrayList y los archivos Persona y Empresa; por algun motivo funcionan como el
+    //orto y no los coge bien. Probablemente sea algo relacionado con la estructura de carpetas horrible que tengo
+    //probar a iniciarlo en una carpeta aislada o algo idk
