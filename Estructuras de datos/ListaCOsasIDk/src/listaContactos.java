@@ -30,19 +30,24 @@ public class listaContactos {
     // TODO: bajas y altas
     // int posicion;
     // boolean resultado;
+    //
     // if ((posicion = this.buscarPersona(id)) != -1) {
     // Persona persona=this.listaPersoas.get(posicion)
     // persona.setTelefono(nuevoTelefono)
     // this.listaPersonas.set(posicion,persona); <-- alta
     // this.listaPersonas.remove(posicion); <-- baja
     // resultado = true;
+    //
     // } else {
+        //
     // if ((posicion = this.buscarEmpresa(id)) != 1) {
     // this.listaEmpresas.remove(posicion);
     // resultado = true;
+    //
     // } else {
+        //
     // resultado = false;
-    // }
+    //  }
     // }
 
     public boolean baja() {
