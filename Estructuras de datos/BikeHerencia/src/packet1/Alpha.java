@@ -1,6 +1,6 @@
 package packet1;
 
-public class Player {
+public class Alpha {
    
     private void loco() {
         System.out.println("poggers");

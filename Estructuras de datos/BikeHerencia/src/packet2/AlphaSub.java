@@ -1,6 +1,9 @@
 package packet2;
 
-public class Dragon {
+public class AlphaSub {
+
+    private int power = 12;
+    // protected int sanity = 1;
 
     public void alv() {
 
