@@ -8,6 +8,11 @@ public class CopyBytes {
         FileInputStream in = null;
         FileOutputStream out = null;
 
+        // int total = 0;
+        int linecount = 1;
+        int contamin = 0;
+        int contamax = 0;
+
         try {
             in = new FileInputStream("xanadu.txt");
             out = new FileOutputStream("outagain.txt");
@@ -15,6 +20,25 @@ public class CopyBytes {
 
             while ((c = in.read()) != -1) {
                 out.write(c);
+
+                if (c == 'a') {
+                    contamin++;
+                } else {
+                    if (c == 'A') {
+                        contamax++;
+                    } else {
+                        if ((c == 10) || (c == '.')) {
+                            System.out.println("Linea " + linecount
+                                    + " tiene: "
+                                    + contamin + " a's y "
+                                    + contamax + " A's");
+                            linecount++;
+                            contamin = 0;
+                            contamax = 0;
+                        }
+                    }
+                }
+
             }
         } finally {
             if (in != null) {
@@ -24,5 +48,8 @@ public class CopyBytes {
                 out.close();
             }
         }
+        // total = contamin + contamax;
+        // System.out.println("Hay un total de " + total);
+
     }
 }
